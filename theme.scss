@@ -1,0 +1,56 @@
+$backgroundColour: White;
+$buttonHoverColor: rgb(96, 189, 93);
+$buttonColor: rgb(18, 165, 13);
+
+.btn-primary {
+    background-color: $buttonColor;
+}
+
+.btn-primary:hover {
+    background-color: $buttonHoverColor;
+}
+
+%gridThemeTemplate {
+    background-color: white;
+    padding: 10px;
+}
+
+%gridTemplate {
+    display: grid;
+    margin: 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+
+.grid {
+    @extend %gridThemeTemplate;
+    @extend %gridTemplate;
+    grid-template-columns: 250px auto 250px;
+}
+
+#advancedGrid {
+    @extend %gridThemeTemplate;
+    @extend %gridTemplate;
+    grid-template-columns: auto 100px;
+}
+
+.grid-item {
+    @extend %gridThemeTemplate;
+    text-align: center;
+
+}
+
+.grid-item-left {
+    @extend %gridThemeTemplate;
+    text-align: left;
+
+}
+
+.grid-item-right {
+    @extend %gridThemeTemplate;
+    text-align: right;
+}
+
+// turn on watching from CLI ... sass --watch theme.scss:style.css
+// remember to keep it running in own shell instance - could this be automated in VSCode a la cmake?
